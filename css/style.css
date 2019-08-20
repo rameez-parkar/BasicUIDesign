@@ -9,6 +9,7 @@
 .middle{
   height: 65%;
   overflow-y: scroll;
+  margin: 0;
 }
 .footer{
   width: 100%;
@@ -17,6 +18,7 @@
   text-align: center;
   color: white;
   position: fixed;
+  margin: 0;
   bottom: 0;
 }
 .content{
