@@ -74,18 +74,40 @@ fieldset{
 
 .textbox{
   width: 40%;
-  height: 10%;
+  height: 15%;
   margin-left: 25%;
 }
 
 .delete{
   background-color: red;
   color: white;
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
 }
 
 .update{
   background-color: green;
   color: white;
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.add{
+  background-color: blue;
+  color: white;
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.formsubmit{
+  background-color: blue;
+  color: white;
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
 }
 
 ul{
