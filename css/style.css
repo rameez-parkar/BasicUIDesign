@@ -8,8 +8,8 @@
 }
 .middle{
   height: 65%;
-  overflow-y: scroll;
   margin: 0;
+  overflow-y: scroll;
 }
 .footer{
   width: 100%;
@@ -73,41 +73,71 @@ fieldset{
 }
 
 .textbox{
-  width: 40%;
-  height: 15%;
-  margin-left: 25%;
+  width: 70%;
+  padding: 1%;
+  margin-left: 10%;
+  font-size: 120%;
+}
+
+button, input.submit{
+  padding: 12px 32px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
 }
 
 .delete{
-  background-color: red;
+  background-color: #f44336;
   color: white;
-  width: 100px;
-  height: 30px;
-  font-size: 20px;
+}
+
+.delete:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #f44336;
 }
 
 .update{
-  background-color: green;
+  background-color: #4CAF50;
   color: white;
-  width: 100px;
-  height: 30px;
-  font-size: 20px;
+}
+
+.update:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
 }
 
 .add{
-  background-color: blue;
+  background-color: #008CBA;
   color: white;
-  width: 100px;
-  height: 30px;
-  font-size: 20px;
+}
+.add:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
 }
 
-.formsubmit{
-  background-color: blue;
+.submit{
+  background-color: #008CBA;
   color: white;
-  width: 100px;
-  height: 30px;
-  font-size: 20px;
+}
+.submit:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.login{
+  background-color: #008CBA;
+  color: white;
+}
+.login:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
 }
 
 ul{
@@ -116,26 +146,26 @@ ul{
   width: 20%;
   height: 100%;
   padding: 0;
-  background-color: #f1f1f1;
+  background-color: #18185a;
   position: absolute;
-  overflow: auto;
+  overflow:auto;
   font-size: 150%;
   font-family: sans-serif;
 }
 
 li a {
   display: block;
-  color: #000000;
+  color: white;
   padding: 8px 16px;
   text-decoration: none;
 }
 
 li a:hover:not(:active) {
-  background-color: #555555;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 li a:active{
-  background-color: #18185a;
-  color: white;
+  background-color: white;
+  color: black;
 }

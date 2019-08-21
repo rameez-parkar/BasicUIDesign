@@ -24,35 +24,33 @@
           <center>
           <img src="images/profilepic.jpg" alt="Profile Pic" width="20%" position="relative">
           </center>
-          <form onsubmit="Validation()" method="get">
+          <form onsubmit="Validation(this,event)" id='frmid' method="get">
           <table>
             <tr>
               <td>Name </td>
-              <td><input type="text" id="name" onclick="Reset(this)"></td>
+              <td><input type="text" id="name" class="textbox" onclick="Reset(this)"></td>
             </tr>
             <tr>
               <td>Gender </td>
-              <td><input type="radio" name="gender" value="male"> Male
+              <td><input type="radio" name="gender"> Male
                   <br>
-                  <input type="radio" name="gender" value="female"> Female
+                  <input type="radio" name="gender"> Female
               </td>
             </tr>
             <tr>
               <td>Date of Birth </td>
-              <td><input type="date" id="dob" name="dob" onclick="Reset(this)"></td>
+              <td><input type="date" id="dob" name="dob" class="textbox" onclick="Reset(this)"></td>
             </tr>
             <tr>
               <td>Contact Number </td>
-              <td><input type="text" id="contact" onclick="Reset(this)"></td>
+              <td><input type="text" id="contact" class="textbox" onclick="Reset(this)"></td>
             </tr>
             <tr>
               <td>Email Id </td>
-              <td><input type="email" id="email" onclick="Reset(this)"></td>
-            </tr>
-            <tr>
-              <td colspan="2"><input type="submit" name="submit" class="formsubmit"></td>
+              <td><input type="email" id="email" class="textbox" onclick="Reset(this)"></td>
             </tr>
           </table>
+          <center><input type="submit" name="submit" class="submit"></center>
         </form>
         </fieldset>
       </div>
