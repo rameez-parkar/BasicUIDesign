@@ -51,6 +51,7 @@ function Search(){
       } else {
         tr[i].style.backgroundColor = "white";
       }
+      
       if(str.length < 1)
       {
         tr[i].style.backgroundColor = "white";
