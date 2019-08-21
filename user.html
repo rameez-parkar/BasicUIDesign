@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
     <title>Web Design</title>
   </head>
   <body>
@@ -23,11 +24,11 @@
           <center>
           <img src="images/profilepic.jpg" alt="Profile Pic" width="20%" position="relative">
           </center>
-          <form action="Validation()">
+          <form onsubmit="Validation()" method="get">
           <table>
             <tr>
               <td>Name </td>
-              <td><input type="text" name="name"></td>
+              <td><input type="text" id="name" onclick="Reset(this)"></td>
             </tr>
             <tr>
               <td>Gender </td>
@@ -38,15 +39,15 @@
             </tr>
             <tr>
               <td>Date of Birth </td>
-              <td><input type="date" name="dob"</td>
+              <td><input type="date" id="dob" name="dob" onclick="Reset(this)"></td>
             </tr>
             <tr>
               <td>Contact Number </td>
-              <td><input type="tel" name="contact"</td>
+              <td><input type="text" id="contact" onclick="Reset(this)"></td>
             </tr>
             <tr>
               <td>Email Id </td>
-              <td><input type="email" name="email"</td>
+              <td><input type="email" id="email" onclick="Reset(this)"></td>
             </tr>
             <tr>
               <td colspan="2"><input type="submit" name="submit" class="formsubmit"></td>
