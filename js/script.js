@@ -1,5 +1,7 @@
 var count=0;
 function Add(){
+  if(document.getElementById('todoitem').value != "")
+  {
     var table = document.getElementById('todotable');
     var row = table.insertRow();
     var cell1 = row.insertCell(0);
@@ -23,8 +25,11 @@ function Add(){
     count++;
 
     document.getElementById('todoitem').value = "";
-
-    DisplayAll();
+  }
+  else {
+    window.alert("Please enter an activity to add to To Do List...");
+  }
+  DisplayAll();
 }
 
 function DisplayAll(){
@@ -68,7 +73,12 @@ function Delete(id){
 function Update(id){
   var label = document.getElementById(id);
   var item = window.prompt("Update the activity...", label.innerHTML);
-  label.innerHTML = item;
+  if(item!=""){
+    label.innerHTML = item;
+  }
+  else{
+    window.alert("Please enter an activity to add to To Do List...");
+  }
 }
 
 function Reset(getid){
