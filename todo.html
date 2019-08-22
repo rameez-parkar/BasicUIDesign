@@ -22,7 +22,8 @@
         <fieldset>
           <legend><b>Add To List</b></legend>
           <input type="text" id="todoitem" class="textbox" onkeyup="Search()" placeholder="Enter To Do Activity...">
-          <button class="add" name="Add" onclick="Add()">Add</button>
+          <button class="add" name="Add" onclick="Add(document.getElementById('todoitem').value)">Add</button>
+          <button class="fetch" name="Fetch" onclick="InitialTodoDefault()">Fetch</button>
 
           <table id="todotable">
 

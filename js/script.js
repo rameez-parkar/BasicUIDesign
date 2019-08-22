@@ -1,13 +1,26 @@
 var count=0;
-function Add(){
-  if(document.getElementById('todoitem').value != "")
+
+function InitialTodoDefault(){
+  const FETCH_COUNT = 10;
+  fetch('https://jsonplaceholder.typicode.com/todos/')
+    .then(response => response.json())
+    .then(function(data){
+      for(let i=1; i<FETCH_COUNT; i++)
+      {
+        Add(data[i].title);
+      }
+    })
+}
+
+function Add(data){
+  if(data != "")
   {
     var table = document.getElementById('todotable');
     var row = table.insertRow();
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var label = document.createElement("label");
-    label.innerHTML=document.getElementById('todoitem').value;
+    label.innerHTML = data;
     label.setAttribute('id',count);
     cell1.append(label);
 
