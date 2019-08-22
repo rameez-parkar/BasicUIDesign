@@ -1,7 +1,5 @@
 var count=0;
 function Add(){
-  if(document.getElementById('todoitem').value.length!=0)
-  {
     var table = document.getElementById('todotable');
     var row = table.insertRow();
     var cell1 = row.insertCell(0);
@@ -27,7 +25,6 @@ function Add(){
     document.getElementById('todoitem').value = "";
 
     DisplayAll();
-  }
 }
 
 function DisplayAll(){
@@ -70,7 +67,7 @@ function Delete(id){
 
 function Update(id){
   var label = document.getElementById(id);
-  var item = prompt("Update the activity...", label.innerHTML);
+  var item = window.prompt("Update the activity...", label.innerHTML);
   label.innerHTML = item;
 }
 
@@ -79,6 +76,7 @@ function Reset(getid){
 }
 
 function Validation(getid, getevent){
+  var isNameIncorrect=false, isContactIncorrect=false, isDOBIncorrect=false, isEmailIncorrect=false;
   getevent.preventDefault();
   var id = getid.getAttribute('id');
   var elements = document.querySelectorAll("#"+id+" input");
@@ -89,6 +87,7 @@ function Validation(getid, getevent){
       var checkNumber = /[0-9]/g;
       if(element.value.length==0 || element.value.match(checkNumber))
       {
+        isNameIncorrect = true;
         element.style.backgroundColor="#CD5C5C";
       }
     }
@@ -97,6 +96,7 @@ function Validation(getid, getevent){
       var checkChar = /[a-zA-Z]/g;
       if(element.value.length!=10 || element.value.match(checkChar))
       {
+        isContactIncorrect = true;
         element.style.backgroundColor="#CD5C5C";
       }
     }
@@ -104,15 +104,25 @@ function Validation(getid, getevent){
     {
       if(element.value.length==0)
       {
+        isEmailIncorrect = true;
         element.style.backgroundColor="#CD5C5C";
       }
     }
     else if(element.id === "dob")
     {
-      if(element.value.length=="mm/dd/yyyy")
+      if(element.value=="mm/dd/yyyy")
       {
+        isDOBIncorrect = true;
         element.style.backgroundColor="#CD5C5C";
       }
     }
+  }
+  if(isNameIncorrect==false && isContactIncorrect==false && isDOBIncorrect==false && isEmailIncorrect==false)
+  {
+    window.alert("Your Data has been submitted!");
+  }
+  else
+  {
+    console.log("dsdsd");
   }
 }
